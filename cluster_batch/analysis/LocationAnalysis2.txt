@@ -1,0 +1,2 @@
+echo "Analysis 3: Sorting state and city-wise restaurants based on the number of reviews"
+spark-submit "$PWD/../../Analysis/LocationAnalysis/top_restaurant_by_state_city.py" data/Dataset/business_data data/Analysis/topRestaurant

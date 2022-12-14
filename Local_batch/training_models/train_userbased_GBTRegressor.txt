@@ -1,0 +1,3 @@
+echo "Preparing to train models"
+echo "Training GBT regressor for unseen review predictions"
+spark-submit "$PWD/../../Modeling/user_star_prediction/training_user_GBTR.py" $PWD/../../data/Dataset/ML_userbased_dataset $PWD/../../models/unseen_GBT_regressor

@@ -1,0 +1,2 @@
+echo "Analysis 1: Count the frequency of different types of categories present in businesses"
+spark-submit "$PWD/../../Analysis/CategoryAnalysis/categoryAnalysis.py" $PWD/../../data/Dataset/business_data $PWD/../../data/Analysis/CategoryAnalysis

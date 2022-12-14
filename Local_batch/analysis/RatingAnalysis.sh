@@ -1,0 +1,2 @@
+echo "Analysis 5: Count the number of different review ratings present in the dataset"
+spark-submit "$PWD/../../Analysis/reviewDistributionAnalysis/reviewAnalysis.py" $PWD/../../data/Dataset/review_data $PWD/../../data/Analysis/ratingAnalysis

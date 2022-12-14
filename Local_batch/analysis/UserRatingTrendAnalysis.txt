@@ -1,0 +1,4 @@
+echo "Analysis 6: Check the review count trend with the user count trend over the years"
+spark-submit "$PWD/../../Analysis/reviewTrendAnalysis/reviewTrendAnalysis.py" $PWD/../../data/Dataset/review_data $PWD/../../data/Analysis/review_trend
+spark-submit "$PWD/../../Analysis/userTrendAnalysis/userTrendAnalysis.py" $PWD/../../data/Dataset/user_data $PWD/../../data/Analysis/user_trend
+spark-submit "$PWD/../../Analysis/trendsTogether/joinedTrendAnalysis.py" $PWD/../../data/Analysis/review_trend_reviewNumberTrend $PWD/../../data/Analysis/user_trend_userJoiningTrend $PWD/../../data/Analysis/review_trend_reviewNumberTrendYearly $PWD/../../data/Analysis/user_trend_userJoiningTrendYearly $PWD/../../data/Analysis/jointAnalysis

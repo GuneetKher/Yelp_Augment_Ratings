@@ -1,0 +1,2 @@
+echo "Analysis 2: State and city-wise restaurant count, average rating and average review count"
+spark-submit "$PWD/../../Analysis/LocationAnalysis/locationAnalysis.py" $PWD/../../data/Dataset/business_data $PWD/../../data/Analysis/locationAnalysis
