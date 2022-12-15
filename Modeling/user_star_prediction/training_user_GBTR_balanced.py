@@ -28,6 +28,7 @@ data_schema = types.StructType([
     types.StructField('avg_business_review_len', types.FloatType()),
     types.StructField('avg_business_polarity', types.FloatType()),
     types.StructField('avg_business_subjectivity', types.FloatType()),
+    types.StructField('row_number', types.FloatType())
 ])
 
 
@@ -105,8 +106,8 @@ def main(inputs,model_file):
 
 
     # Validation testing after predicting a rating range
-    predictions = predictions.withColumn('new_prediction_upper',functions.ceil(predictions['prediction']*2)/2)
-    predictions = predictions.withColumn('new_prediction_lower',functions.floor(predictions['prediction']*2)/2)
+    predictions = predictions.withColumn('new_prediction_upper',functions.ceil(predictions['prediction']))
+    predictions = predictions.withColumn('new_prediction_lower',functions.floor(predictions['prediction']))
 
     # predictions.show()
 
